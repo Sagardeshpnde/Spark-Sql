@@ -151,7 +151,8 @@ productsjoin.groupBy("order_date,product_name").sum("order_item_quantity").order
 customers.groupBy("customer_state").count(distinct("customer_fname").rdd.saveAsTextFile("C:\Users\SAGAR\Desktop\data\output9.txt")
 
  
-----------------------------------------------------------------------------------------------------10) Most popular product category :
+----------------------------------------------------------------------------------------------------
+10) Most popular product category :
 
 productsjoin.groupBy("product_category_id,product_name").sum("order_item_quantity").orderBy(sum("order_item_quantity")desc.rdd.saveAsTextFile("C:\Users\SAGAR\Desktop\data\output10.txt")
 
